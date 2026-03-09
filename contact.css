@@ -1,0 +1,268 @@
+/* =========================
+CONTACT SECTION
+========================= */
+
+#contact{
+background:#F5E7C6;
+padding:90px 10%;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+
+.contact-header{
+text-align:center;
+margin-bottom:70px;
+}
+
+.contact-header h2{
+font-size:40px;
+color:#F63049;
+margin-bottom:12px;
+letter-spacing:1px;
+animation:floatTitle 4s ease-in-out infinite;
+}
+
+.contact-header p{
+color:#555;
+font-size:16px;
+}
+
+/* MAIN CONTAINER */
+
+.contact-container{
+display:flex;
+gap:50px;
+align-items:stretch;
+}
+
+/* CARD STYLE */
+
+.contact-info,
+.contact-form{
+flex:1;
+background:white;
+padding:35px;
+border-radius:16px;
+box-shadow:0 12px 30px rgba(0,0,0,0.08);
+transition:transform .35s ease, box-shadow .35s ease;
+}
+
+/* CARD HOVER */
+
+.contact-info:hover,
+.contact-form:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 45px rgba(0,0,0,0.15);
+}
+
+/* CONTACT INFO */
+
+.contact-info h3{
+color:#F63049;
+margin-bottom:25px;
+}
+
+.info-item{
+display:flex;
+align-items:center;
+gap:12px;
+margin-bottom:16px;
+font-size:15px;
+}
+
+.info-item span{
+font-size:20px;
+}
+
+/* SOCIAL MEDIA */
+
+.social-media{
+margin-top:30px;
+}
+
+.social-icons{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.social-icons a{
+text-decoration:none;
+background:#F63049;
+color:white;
+padding:8px 16px;
+border-radius:20px;
+font-size:13px;
+transition:all .3s ease;
+}
+
+.social-icons a:hover{
+background:#d81f36;
+transform:translateY(-3px);
+box-shadow:0 8px 15px rgba(246,48,73,0.35);
+}
+
+/* CONTACT FORM */
+
+.contact-form h3{
+margin-bottom:20px;
+color:#F63049;
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:12px 14px;
+margin-bottom:15px;
+border-radius:8px;
+border:1px solid #ddd;
+font-size:14px;
+transition:border .25s ease, box-shadow .25s ease;
+}
+
+/* INPUT FOCUS */
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+outline:none;
+border-color:#F63049;
+box-shadow:0 0 0 2px rgba(246,48,73,0.2);
+}
+
+/* BUTTON */
+
+.contact-form button{
+width:100%;
+padding:13px;
+border:none;
+background:#F63049;
+color:white;
+font-size:15px;
+border-radius:8px;
+cursor:pointer;
+transition:all .3s ease;
+}
+
+.contact-form button:hover{
+background:#d81f36;
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(246,48,73,0.35);
+}
+
+/* GOOGLE MAP */
+
+.contact-map{
+margin-top:70px;
+border-radius:14px;
+overflow:hidden;
+box-shadow:0 12px 30px rgba(0,0,0,0.1);
+transition:transform .35s ease;
+}
+
+.contact-map:hover{
+transform:scale(1.02);
+}
+
+.contact-map iframe{
+width:100%;
+height:320px;
+border:none;
+}
+
+/* =========================
+SCROLL REVEAL ANIMATION (SAMA SEPERTI SECTION LAIN)
+========================= */
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:opacity .7s ease, transform .7s ease;
+will-change:transform, opacity;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* =========================
+PAGE LOAD ANIMATION DENGAN DELAY
+========================= */
+
+/* Header - muncul pertama */
+.contact-header {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: contactLoadReveal 0.8s ease forwards;
+}
+
+/* Info dan Form - muncul setelah header */
+.contact-info {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: contactLoadReveal 0.8s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.contact-form {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: contactLoadReveal 0.8s ease forwards;
+    animation-delay: 0.4s;
+}
+
+/* Map - muncul terakhir */
+.contact-map {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: contactLoadReveal 0.8s ease forwards;
+    animation-delay: 0.6s;
+}
+
+@keyframes contactLoadReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+TITLE FLOAT
+========================= */
+
+@keyframes floatTitle{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-6px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width:900px){
+
+.contact-container{
+flex-direction:column;
+}
+
+.contact-map iframe{
+height:260px;
+}
+
+}

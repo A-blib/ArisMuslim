@@ -1,0 +1,458 @@
+/* =========================
+HOME HERO SMOOTH
+========================= */
+
+#home{
+    height:100vh;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(
+    135deg,
+    #48A111,
+    #2f8f55,
+    #1f55c9,
+    #261CC1
+);
+    background-size:300% 300%;
+    animation:bgMove 12s ease-in-out infinite;
+}
+
+/* =========================
+PARTICLE EFFECTS
+========================= */
+
+#home::before,
+#home::after,
+#home .particle-1,
+#home .particle-2,
+#home .particle-3{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    animation: floatParticle 15s ease-in-out infinite;
+}
+
+#home::before{
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+    top: -100px;
+    left: -100px;
+    animation-delay: 0s;
+}
+
+#home::after{
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    bottom: -50px;
+    right: -50px;
+    animation-delay: -5s;
+}
+
+.particle-1{
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 70%);
+    top: 30%;
+    right: 20%;
+    animation-delay: -2s;
+}
+
+.particle-2{
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+    bottom: 25%;
+    left: 15%;
+    animation-delay: -7s;
+}
+
+.particle-3{
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    top: 60%;
+    right: 10%;
+    animation-delay: -10s;
+}
+
+@keyframes floatParticle{
+0%, 100%{ 
+    transform: translate(0, 0) scale(1); 
+    opacity: 0.6;
+}
+25%{ 
+    transform: translate(30px, -40px) scale(1.1); 
+    opacity: 0.8;
+}
+50%{ 
+    transform: translate(-20px, 20px) scale(0.9); 
+    opacity: 0.5;
+}
+75%{ 
+    transform: translate(40px, 30px) scale(1.05); 
+    opacity: 0.7;
+}
+}
+
+/* BACKGROUND ANIMATION */
+
+@keyframes bgMove{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
+/* =========================
+CONTAINER
+========================= */
+
+.home-container{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    padding:40px;
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+/* =========================
+TITLE
+========================= */
+
+.hero-title{
+    font-size:64px;
+    font-weight:800;
+    letter-spacing:4px;
+    color:white;
+    margin-bottom:20px;
+    opacity:0;
+    transform:translateY(40px);
+    animation:titleFade 1.2s cubic-bezier(.22,.61,.36,1) forwards;
+    will-change:transform, opacity;
+    text-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+/* Decorative underline */
+.hero-title::after{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #fff, transparent);
+    border-radius: 2px;
+    animation: titleUnderline 1.5s ease forwards;
+    animation-delay: 1.2s;
+}
+
+@keyframes titleUnderline{
+0%{ width: 0; opacity: 0; }
+50%{ width: 200px; opacity: 1; }
+100%{ width: 150px; opacity: 0.8; }
+}
+
+/* =========================
+SUBTITLE
+========================= */
+
+.hero-subtitle{
+    font-size:22px;
+    color:rgba(255,255,255,0.85);
+    max-width:600px;
+    line-height:1.6;
+    opacity:0;
+    transform:translateY(40px);
+    animation:subtitleFade 1.6s cubic-bezier(.22,.61,.36,1) forwards;
+    animation-delay:0.4s;
+    will-change:transform, opacity;
+    position: relative;
+}
+
+/* Typing cursor effect */
+.hero-subtitle::after{
+    content: '|';
+    animation: blink 1s step-end infinite;
+    margin-left: 5px;
+}
+
+@keyframes blink{
+0%, 100%{ opacity: 1; }
+50%{ opacity: 0; }
+}
+
+/* TITLE REVEAL */
+
+@keyframes titleFade{
+
+0%{
+    opacity:0;
+    transform:translateY(50px);
+}
+
+100%{
+    opacity:1;
+    transform:translateY(0);
+}
+
+}
+
+/* SUBTITLE REVEAL */
+
+@keyframes subtitleFade{
+
+0%{
+    opacity:0;
+    transform:translateY(50px);
+}
+
+100%{
+    opacity:1;
+    transform:translateY(0);
+}
+
+}
+
+/* FLOATING TEXT */
+
+.hero-title{
+    animation:
+    titleFade 1.2s cubic-bezier(.22,.61,.36,1) forwards,
+    floating 6s ease-in-out infinite;
+    animation-delay:0s,1.2s;
+}
+
+/* FLOATING ANIMATION */
+
+@keyframes floating{
+
+0%{transform:translateY(0);}
+50%{transform:translateY(-6px);}
+100%{transform:translateY(0);}
+
+}
+
+/* =========================
+GLOW ORBS
+========================= */
+
+.glow-orb{
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: orbFloat 10s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.glow-orb-1{
+    width: 400px;
+    height: 400px;
+    background: rgba(72, 161, 17, 0.3);
+    top: -150px;
+    left: -100px;
+    animation-delay: 0s;
+}
+
+.glow-orb-2{
+    width: 300px;
+    height: 300px;
+    background: rgba(31, 85, 201, 0.25);
+    bottom: -100px;
+    right: -50px;
+    animation-delay: -5s;
+}
+
+.glow-orb-3{
+    width: 200px;
+    height: 200px;
+    background: rgba(72, 161, 17, 0.2);
+    top: 50%;
+    right: 10%;
+    animation-delay: -3s;
+}
+
+@keyframes orbFloat{
+0%, 100%{ 
+    transform: translate(0, 0) scale(1); 
+}
+25%{ 
+    transform: translate(50px, -30px) scale(1.1); 
+}
+50%{ 
+    transform: translate(-30px, 50px) scale(0.95); 
+}
+75%{ 
+    transform: translate(30px, 20px) scale(1.05); 
+}
+}
+
+/* =========================
+WAVE DECORATION
+========================= */
+
+.wave-decoration{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave-decoration svg{
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 60px;
+}
+
+.wave-decoration .shape-fill{
+    fill: rgba(255,255,255,0.1);
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+.hero-title{
+    font-size:42px;
+    letter-spacing: 2px;
+}
+
+.hero-subtitle{
+    font-size:18px;
+}
+
+.glow-orb-1{
+    width: 250px;
+    height: 250px;
+}
+
+.glow-orb-2{
+    width: 200px;
+    height: 200px;
+}
+
+#home::before{
+    width: 200px;
+    height: 200px;
+}
+
+}
+
+@media(max-width:480px){
+
+.hero-title{
+    font-size:32px;
+}
+
+.hero-subtitle{
+    font-size:16px;
+    padding: 0 20px;
+}
+
+}
+
+/* =========================
+SCROLL INDICATOR
+========================= */
+
+.scroll-indicator{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 2s;
+}
+
+.scroll-indicator span{
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.scroll-indicator .mouse{
+    width: 24px;
+    height: 40px;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 12px;
+    position: relative;
+}
+
+.scroll-indicator .mouse::before{
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 8px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 2px;
+    animation: scrollMouse 2s ease-in-out infinite;
+}
+
+@keyframes scrollMouse{
+0%, 100%{ 
+    opacity: 1; 
+    transform: translateX(-50%) translateY(0); 
+}
+50%{ 
+    opacity: 0.3; 
+    transform: translateX(-50%) translateY(10px); 
+}
+}
+
+@keyframes fadeInUp{
+from{
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+}
+to{
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+}
+
+/* =========================
+HOVER EFFECTS
+========================= */
+
+.hero-title:hover{
+    text-shadow: 0 15px 50px rgba(0,0,0,0.4);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+.hero-subtitle:hover{
+    color: rgba(255,255,255,1);
+    text-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}

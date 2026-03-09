@@ -1,0 +1,481 @@
+/* =========================
+GAME SECTION
+========================= */
+
+#game{
+    min-height:100vh;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(
+    135deg,
+    #48A111,
+    #2f8f55,
+    #1f55c9,
+    #261CC1
+);
+    background-size:300% 300%;
+    animation:bgMove 10s ease infinite;
+    font-family:Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Floating Particles Background */
+#game::before,
+#game::after{
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: floatBubble 8s ease-in-out infinite;
+}
+
+#game::before{
+    background: rgba(255,255,255,0.1);
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+#game::after{
+    background: rgba(255,255,255,0.08);
+    bottom: 15%;
+    right: 10%;
+    animation-delay: -4s;
+}
+
+@keyframes floatBubble{
+    0%, 100%{ transform: translate(0, 0) scale(1); }
+    25%{ transform: translate(30px, -30px) scale(1.1); }
+    50%{ transform: translate(-20px, 20px) scale(0.9); }
+    75%{ transform: translate(20px, 30px) scale(1.05); }
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+
+/* =========================
+GAME CARD
+========================= */
+
+.game-container{
+    width:420px;
+    background:rgba(255,255,255,0.95);
+    backdrop-filter:blur(12px);
+    border-radius:24px;
+    padding:40px;
+    text-align:center;
+    box-shadow:0 30px 80px rgba(0,0,0,0.25),0 0 40px rgba(72,161,17,0.15);
+    border-top:6px solid #48A111;
+    animation:cardAppear .8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition:.35s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Card shine effect */
+.game-container::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+    45deg,
+    transparent 40%,
+    rgba(255,255,255,0.1) 50%,
+    transparent 60%
+);
+    animation: cardShine 4s ease-in-out infinite;
+}
+
+@keyframes cardShine{
+    0%, 100%{ transform: translateX(-100%) rotate(45deg); }
+    50%{ transform: translateX(100%) rotate(45deg); }
+}
+
+.game-container:hover{
+    transform:translateY(-8px) scale(1.02);
+    box-shadow:0 40px 100px rgba(0,0,0,0.3),0 0 60px rgba(72,161,17,0.2);
+}
+
+@keyframes cardAppear{
+    0%{
+    opacity: 0;
+    transform: scale(0.8) translateY(30px);
+}
+100%{
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+}
+
+
+/* =========================
+TITLE
+========================= */
+
+.game-container h1{
+    font-size:32px;
+    color:#48A111;
+    letter-spacing:2px;
+    margin-bottom:5px;
+    text-transform: uppercase;
+    position: relative;
+    animation: titleGlow 2s ease-in-out infinite;
+}
+
+@keyframes titleGlow{
+    0%, 100%{ text-shadow: 0 0 10px rgba(72,161,17,0.3); }
+    50%{ text-shadow: 0 0 25px rgba(72,161,17,0.6); }
+}
+
+.game-container p{
+    color:#666;
+    margin-bottom:25px;
+    font-size: 15px;
+}
+
+
+/* =========================
+START BUTTON
+========================= */
+
+#startGame{
+    padding:16px 40px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(
+    135deg,
+    #48A111,
+    #6edc2c
+);
+    color:white;
+    font-weight:700;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor:pointer;
+    transition:.3s;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(72,161,17,0.4);
+}
+
+#startGame::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.3),
+    transparent
+);
+    animation: buttonShine 2s ease-in-out infinite;
+}
+
+@keyframes buttonShine{
+    0%, 100%{ left: -100%; }
+    50%{ left: 100%; }
+}
+
+#startGame:hover{
+    transform:translateY(-4px) scale(1.05);
+    box-shadow:0 15px 40px rgba(72,161,17,0.5);
+}
+
+#startGame:active{
+    transform:translateY(-2px) scale(1.02);
+}
+
+
+/* =========================
+GAME INFO
+========================= */
+
+.game-info{
+    display:flex;
+    justify-content:space-between;
+    font-size:14px;
+    font-weight: 600;
+    margin-bottom:15px;
+    padding: 10px 15px;
+    background: rgba(72,161,17,0.1);
+    border-radius: 10px;
+}
+
+
+/* =========================
+QUESTION NUMBER
+========================= */
+
+#questionNumber{
+    color:#48A111;
+    font-weight: 700;
+}
+
+
+/* =========================
+TIMER
+========================= */
+
+#timer{
+    font-weight:bold;
+    color:#ff4d4d;
+    animation:timerPulse 1s infinite;
+}
+
+@keyframes timerPulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.15);}
+    100%{transform:scale(1);}
+}
+
+
+/* =========================
+QUESTION
+========================= */
+
+#questionText{
+    font-size:48px;
+    margin:25px 0;
+    font-weight:800;
+    color:#222;
+    background:#f0f8f0;
+    padding:20px;
+    border-radius:16px;
+    border: 3px solid #48A111;
+    animation:questionPop .4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    text-shadow: 2px 2px 0 rgba(72,161,17,0.2);
+}
+
+@keyframes questionPop{
+    0%{
+    transform:scale(.5);
+    opacity:0;
+    rotate: -10deg;
+}
+
+100%{
+    transform:scale(1);
+    opacity:1;
+    rotate: 0deg;
+}
+}
+
+
+/* =========================
+INPUT
+========================= */
+
+#answerInput{
+    padding:16px;
+    width:200px;
+    border-radius:14px;
+    border:3px solid #ddd;
+    text-align:center;
+    font-size:22px;
+    font-weight: 600;
+    margin-bottom:18px;
+    transition:.3s;
+    background: rgba(255,255,255,0.9);
+}
+
+#answerInput:focus{
+    outline:none;
+    border-color:#48A111;
+    box-shadow:0 0 0 5px rgba(72,161,17,.2),
+                0 10px 30px rgba(72,161,17,0.15);
+    transform:scale(1.05);
+}
+
+#answerInput::placeholder{
+    color: #aaa;
+    font-weight: 400;
+}
+
+
+/* =========================
+SUBMIT BUTTON
+========================= */
+
+#submitAnswer{
+    padding:14px 35px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(
+    135deg,
+    #48A111,
+    #6edc2c
+);
+
+color:white;
+    font-weight:600;
+    font-size: 15px;
+    cursor:pointer;
+    transition:.25s;
+    box-shadow: 0 6px 20px rgba(72,161,17,0.35);
+}
+
+#submitAnswer:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(72,161,17,0.45);
+}
+
+
+/* =========================
+RESULT TABLE
+========================= */
+
+table{
+    width:100%;
+    margin-top:20px;
+    border-collapse:separate;
+    border-spacing: 0;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+table th{
+    background:linear-gradient(135deg, #48A111, #6edc2c);
+    color:white;
+    padding:14px 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+table td{
+    padding:12px 10px;
+    border-bottom:1px solid #eee;
+    text-align: center;
+}
+
+table tr:nth-child(even){
+    background:#f9f9f9;
+}
+
+table tr:hover{
+    background:#e8f5e9;
+}
+
+table tr:last-child td{
+    border-bottom: none;
+}
+
+
+/* =========================
+RESULT SCREEN
+========================= */
+
+#game-result{
+    animation:fadeResult .6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#game-result h2{
+    color: #48A111;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+#scoreText{
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+    padding: 15px;
+    background: rgba(72,161,17,0.1);
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+@keyframes fadeResult{
+0%{
+    opacity:0;
+    transform:translateY(40px) scale(0.9);
+}
+
+100%{
+    opacity:1;
+    transform:translateY(0) scale(1);
+}
+}
+
+
+/* =========================
+RESTART BUTTON
+========================= */
+
+#restartGame{
+    padding:14px 35px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(
+    135deg,
+    #1f55c9,
+    #48A111
+);
+
+color:white;
+    font-weight:600;
+    cursor:pointer;
+    transition:.25s;
+    margin-top: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+#restartGame:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(0,0,0,0.3);
+}
+
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width:500px){
+
+.game-container{
+    width:95%;
+    padding:25px;
+}
+
+#questionText{
+    font-size:36px;
+    padding: 15px;
+}
+
+#answerInput{
+    width:100%;
+    font-size: 20px;
+}
+
+button{
+    width: 100%;
+    padding: 16px;
+}
+
+.game-container h1{
+    font-size: 24px;
+}
+
+#timer{
+    font-size: 18px;
+}
+
+#questionNumber{
+    font-size: 14px;
+}
+}

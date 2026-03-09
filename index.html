@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main || dashboard</title>
+
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="cv.css">
+    <link rel="stylesheet" href="portofilio.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+
+    <button class="menu-toggle" id="menuToggle">
+        <i class="bi bi-list"></i>
+    </button>
+
+    <!-- sidebar -->
+
+    <nav>
+        <div class="container-for-nav">
+            <div class="foto-part-nav"></div>
+            <p>M.Ariza fi'i Muslimin</p>
+        </div>
+
+        <div class="menu-navigation">
+           <a data-page="home" onclick="showPage('home');return false;">
+                <i class="bi bi-house" style="font-size: 1.25rem;"></i>
+                <span>Main</span>
+            </a>
+            <a data-page="cv" onclick="showPage('cv');return false;">
+                <i class="bi bi-terminal-plus"></i>
+                <span>Menu CV</span>
+            </a>
+            <a data-page="portfolio" onclick="showPage('portfolio');return false;">
+                <i class="bi bi-folder"></i>
+                <span>Portfolio</span>
+            </a>
+           <a data-page="game" onclick="showPage('game');return false;">
+                </i><i class="bi bi-controller"></i>
+                <span>Mini Game</span>
+            </a>
+            <a data-page="contact" onclick="showPage('contact');return false;">
+                <i class="bi bi-person-lines-fill"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- sidebar end -->
+
+    <!-- main -->
+
+    <main>
+        <!-- Home -->
+        <section id="home" class="active">
+            <div class="home-container">
+                <div class="hero">
+
+                <h1 class="hero-title">
+                WELCOME TO MY WEBSITE
+                </h1>
+
+                <p class="hero-subtitle">
+                Explore my works, projects and ideas
+                </p>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="cv">
+            <div class="header-container">
+                <div class="nav-cv-right">
+                    <p>Cv<span>Aris</span></p>
+                </div>
+                <div class="nav-cv-left">
+                    <a href="#one" onclick="event.stopPropagation()">Home</a>
+                    <a href="#two" onclick="event.stopPropagation()">About me</a>
+                    <a href="#tree" onclick="event.stopPropagation()">Skill</a>
+                    <a href="#four" onclick="event.stopPropagation()">Pengalaman</a>
+                    <a href="#vive" onclick="event.stopPropagation()">Hoby</a>
+                </div>
+            </div>
+
+            <!-- Home end -->
+
+            <!-- Menu cv -->
+
+            <div class="main-cv">
+                <!-- HERO -->
+                <div class="cv-one reveal delay-1" id="one">
+                    <div class="cv-hero reveal delay-2">
+                        <h2>Halo, saya Aris 👋</h2>
+                        <p>Seorang pelajar yang memiliki minat pada teknologi, analisis, dan pengembangan keterampilan digital.</p>
+                        <p>Saya percaya bahwa konsistensi belajar dan pengalaman adalah kunci untuk berkembang.</p>
+                        <a href="">lihat lebih</a>
+
+                        <div class="sosmed-cv reveal delay-3">
+                            <i class="bi bi-github"></i>
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-instagram"></i>
+                            <i class="bi bi-linkedin"></i>
+                        </div>
+                    </div>
+
+                    <div class="img-cv-one reveal delay-4">
+                        <img src="/asset/arisOne.png" alt="gambar rusak">
+                    </div>
+                </div>
+
+                <!-- ABOUT -->
+                <div class="cv-two reveal delay-1" id="two">
+                    <div class="about">
+                        <h2 class="reveal delay-2">About Me</h2>
+                        <div class="about-content">
+
+                            <!-- FOTO -->
+                            <div class="about-photo reveal delay-3">
+                                <img src="/asset/aris-nav.png" alt="Foto Profil Aris">
+                            </div>
+
+                            <!-- TEXT -->
+                            <div class="about-text reveal delay-4">
+                                <p>
+                                    Saya adalah seorang pelajar yang tertarik pada teknologi dan
+                                    pengembangan keterampilan digital. Saya senang belajar hal
+                                    baru dan meningkatkan kemampuan analisis.
+                                </p>
+                                <hr>
+                                <div class="about-info">
+                                    <h3>Informasi</h3>
+                                    <ul>
+                                        <li><strong>Nama:</strong> Aris</li>
+                                        <li><strong>Status:</strong> Pelajar</li>
+                                        <li><strong>Minat:</strong> Teknologi</li>
+                                        <li><strong>Lokasi:</strong> Indonesia</li>
+                                    </ul>
+                                </div>
+                                <hr>
+                                <div class="about-skills">
+                                    <h3>Skills</h3>
+                                    <ul>
+                                        <li>Problem Solving</li>
+                                        <li>HTML & CSS</li>
+                                        <li>Analisis</li>
+                                        <li>Fast Learning</li>
+                                    </ul>
+                                </div>
+                                <hr>
+                                <div class="about-goal">
+                                    <h3>Tujuan</h3>
+                                    <p>
+                                        Mengembangkan kemampuan teknologi dan analisis untuk
+                                        membangun keterampilan yang berguna di masa depan.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SKILL -->
+                <div class="skill reveal delay-1" id="tree">
+                    <div class="skill-category reveal delay-2">
+                        <h3>Frontend</h3>
+                        <div class="skill-grid">
+
+                            <div class="skill-item reveal delay-3">HTML</div>
+                            <div class="skill-item reveal delay-3">CSS</div>
+                            <div class="skill-item reveal delay-3">JavaScript</div>
+                            <div class="skill-item reveal delay-4">React</div>
+                            <div class="skill-item reveal delay-4">Tailwind</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category reveal delay-3">
+                        <h3>Backend / Programming</h3>
+                        <div class="skill-grid">
+                            <div class="skill-item reveal delay-4">Python</div>
+                            <div class="skill-item reveal delay-4">Java</div>
+                            <div class="skill-item reveal delay-5">MySQL</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EXPERIENCE -->
+                <div class="cv-pengalaman reveal delay-1" id="four">
+                    <h2 class="reveal delay-2">Experience</h2>
+                    <div class="timeline">
+                        <div class="timeline-item reveal delay-3">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">January 2025</span>
+                                <h3>Mulai Belajar Web Development</h3>
+                                <p>Memahami dasar HTML dan CSS.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item reveal delay-4">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">March 2025</span>
+                                <h3>Belajar JavaScript</h3>
+                                <p>Memahami interaktivitas website.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item reveal delay-5">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">August 2025</span>
+                                <h3>Membuat Project Website</h3>
+                                <p>Membuat CV dan portfolio.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- HOBBY -->
+                <div class="cv-hoby reveal delay-1" id="vive">
+                    <h2 class="reveal delay-2">Hobbies</h2>
+                    <div class="hobby-grid">
+
+                        <div class="hobby-item reveal delay-3">
+                            <span>💻</span> Coding
+                        </div>
+
+                        <div class="hobby-item reveal delay-3">
+                            <span>📚</span> Belajar
+                        </div>
+
+                        <div class="hobby-item reveal delay-4">
+                            <span>🎧</span> Musik
+                        </div>
+
+                        <div class="hobby-item reveal delay-4">
+                            <span>🎮</span> Bang Windah
+                        </div>
+
+                        <div class="hobby-item reveal delay-5">
+                            <span>🌱</span> Eksplor Hal Baru
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="cv-footer">
+                <div class="footer-container">
+                    <h2>Aris Cv</h2>
+
+                    <p class="footer-tagline">
+                        Coding • Learning • Building the Future
+                    </p>
+
+                    <div class="footer-social">
+
+                        <a href="#">
+                            <i class="bi bi-github"></i>
+                            Github
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-instagram"></i>
+                            Instagram
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-linkedin"></i>
+                            LinkedIn
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-envelope"></i>
+                            Email
+                        </a>
+                    </div>
+
+                    <div class="footer-bottom">
+                        © 2026 Aris. All rights reserved.
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Menu cv end -->
+
+        <!-- Menu Portofolio -->
+
+        <section id="portfolio">
+            <div class="container-nav-portfolio">
+                <div class="nav-portfolio-left">
+                    <h2>Aris<span>Portofolio</span></h2>
+                </div>
+
+                <div class="nav-portfolio-right">
+
+                  <a href="#portfolio">Home</a>
+                <a href="#portfolio-skills">Skill</a>
+                <a href="#portfolio-project">Portfolio</a>
+                <a href="#portfolio-experience">Experience</a>
+                <a href="#" onclick="showPage('contact'); return false;">Contact</a>
+                </div>
+
+            </div>
+
+            <div class="main-portfolio">
+                <div class="portfolio-hero reveal delay-1">
+                   <div class="hero-left">
+
+                    <h1 id="hero-title"></h1>
+                    <h3>A Web Development Learner</h3>
+                    <p>
+                        who enjoys building websites
+                        and exploring modern technologies.
+                    </p>
+                    <p>
+                        Currently learning React,
+                        Tailwind, and improving skills.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#" class="btn-primary">
+                            View Portfolio
+                        </a>
+                        <a href="#" class="btn-secondary">
+                            Contact Me
+                        </a>
+
+                    </div>
+                </div>
+
+
+                <div class="hero-right">
+                    <img src="/asset/arisTwo.png" alt="Developer Photo">
+                </div>
+
+                </div>
+
+                <div class="portfolio-skill reveal delay-1">
+                    <h2 class="portfolio-skill-title">MY SKILLS</h2>
+    
+                    <div class="skill-grid-portfolio">
+        
+                        <div class="skill-card html reveal delay-1">
+                            <div class="skill-icon">🌐</div>
+                            <h3>HTML</h3>
+                        </div>
+        
+                        <div class="skill-card css reveal delay-2">
+                            <div class="skill-icon">🎨</div>
+                            <h3>CSS</h3>
+                        </div>
+        
+                        <div class="skill-card js reveal delay-3">
+                            <div class="skill-icon">⚡</div>
+                            <h3>JavaScript</h3>
+                        </div>
+        
+                        <div class="skill-card react reveal delay-1">
+                            <div class="skill-icon">⚛️</div>
+                            <h3>React</h3>
+                        </div>
+        
+                        <div class="skill-card tailwind reveal delay-2">
+                            <div class="skill-icon">🍃</div>
+                            <h3>Tailwind</h3>
+                        </div>
+        
+                        <div class="skill-card python reveal delay-3">
+                            <div class="skill-icon">🐍</div>
+                            <h3>Python</h3>
+                        </div>
+        
+                        <div class="skill-card java reveal delay-1">
+                            <div class="skill-icon">☕</div>
+                            <h3>Java</h3>
+                        </div>
+        
+                        <div class="skill-card mysql reveal delay-2">
+                            <div class="skill-icon">🗄️</div>
+                            <h3>MySQL</h3>
+                        </div>
+        
+                    </div>
+                </div>
+    
+                
+                <div class="portfolio-portfolio reveal delay-1">
+                    <h2 class="portfolio-project-title reveal delay-2">PORTOFOLIO SAYA</h2>
+                    <p class="portfolio-project-subtitle reveal delay-3">
+                        Beberapa project yang saya buat selama belajar
+                    </p>
+
+                    <div class="portfolio-grid">
+
+                        <!-- PROJECT 1 -->
+                        <div class="portfolio-card reveal delay-1">
+                            <div class="portfolio-preview">
+                                <img src="/asset/kasirJava.png" alt="Project OOP Java">
+                            </div>
+
+                            <div class="portfolio-content">
+                                <h3>Program OOP Java</h3>
+                                <p>
+                                    Program contoh konsep Object Oriented Programming
+                                    menggunakan bahasa Java.
+                                </p>
+
+                                <div class="portfolio-tech">
+                                    <span>Java</span>
+                                </div>
+
+                                <div class="portfolio-buttons">
+                                    <a href="#" class="btn-view">Lihat</a>
+                                    <a href="#" class="btn-github">Github</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- PROJECT 2 -->
+                        <div class="portfolio-card reveal delay-2">
+                            <div class="portfolio-preview">
+                                <img src="/asset/kasirJava.png" alt="Project Python">
+                            </div>
+
+                            <div class="portfolio-content">
+                                <h3>Aritmatika Python</h3>
+                                <p>
+                                    Program aritmatika sederhana menggunakan
+                                    bahasa Python.
+                                </p>
+
+                                <div class="portfolio-tech">
+                                    <span>Python</span>
+                                </div>
+
+                                <div class="portfolio-buttons">
+                                    <a href="#" class="btn-view">Lihat</a>
+                                    <a href="#" class="btn-github">Github</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- PROJECT 3 -->
+                        <div class="portfolio-card hidden-project reveal delay-1">
+                            <div class="portfolio-preview">
+                                <img src="/asset/cv.png" alt="Web CV">
+                            </div>
+
+                            <div class="portfolio-content">
+                                <h3>Website CV</h3>
+                                <p>
+                                    Website CV pribadi yang menampilkan
+                                    informasi diri dan kemampuan.
+                                </p>
+
+                                <div class="portfolio-tech">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                </div>
+
+                                <div class="portfolio-buttons">
+                                    <a href="#" class="btn-view">Lihat</a>
+                                    <a href="#" class="btn-github">Github</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- PROJECT 4 -->
+                        <div class="portfolio-card hidden-project reveal delay-2">
+                            <div class="portfolio-preview">
+                                <img src="/asset/portofolio.png" alt="Web Portfolio">
+                            </div>
+
+                            <div class="portfolio-content">
+                                <h3>Website Portofolio</h3>
+                                <p>
+                                    Website portfolio untuk menampilkan
+                                    project dan skill yang saya pelajari.
+                                </p>
+
+                                <div class="portfolio-tech">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JS</span>
+                                </div>
+
+                                <div class="portfolio-buttons">
+                                    <a href="#" class="btn-view">Lihat</a>
+                                    <a href="#" class="btn-github">Github</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- PROJECT 5 -->
+                        <div class="portfolio-card hidden-project reveal delay-1">
+                            <div class="portfolio-preview">
+                                <img src="/asset/dashboard.png" alt="Dashboard">
+                            </div>
+
+                            <div class="portfolio-content">
+                                <h3>Dashboard Sederhana</h3>
+                                <p>
+                                    Tampilan dashboard sederhana untuk
+                                    menampilkan data dan navigasi web.
+                                </p>
+
+                                <div class="portfolio-tech">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JS</span>
+                                </div>
+
+                                <div class="portfolio-buttons">
+                                    <a href="#" class="btn-view">Lihat</a>
+                                    <a href="#" class="btn-github">Github</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- PROJECT 6 -->
+                        <div class="portfolio-card hidden-project reveal delay-2">
+                            <div class="portfolio-preview">
+                                <img src="/asset/kasirJava.png" alt="Kasir Java">
+                            </div>
+
+                            <div class="portfolio-content">
+                                <h3>Program Kasir Java</h3>
+                                <p>
+                                    Program kasir sederhana yang dibuat
+                                    menggunakan bahasa Java.
+                                </p>
+
+                                <div class="portfolio-tech">
+                                    <span>Java</span>
+                                </div>
+
+                                <div class="portfolio-buttons">
+                                    <a href="#" class="btn-view">Lihat</a>
+                                    <a href="#" class="btn-github">Github</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-show-project reveal delay-3">
+                        Lihat Lebih Banyak Project
+                    </button>
+
+                    </div>
+
+
+                    <div class="portfolio-experience reveal delay-1">
+                        <h2 class="experience-title" reveal delay-2>EXPERIENCE</h2>
+
+                        <div class="experience-container reveal delay-2">
+                            <div class="experience-line"></div>
+
+                            <!-- 2026 -->
+                            <div class="experience-item reveal delay-1">
+
+                                <div class="experience-date">
+                                    Jan 2026
+                                </div>
+
+                                <div class="experience-dot"></div>
+
+                                <div class="experience-content">
+                                    <h3>Belajar React & Tailwind</h3>
+                                    <p>Framework frontend modern</p>
+                                </div>
+                            </div>
+
+
+                            <!-- 2025 AUG -->
+                            <div class="experience-item reveal delay-2">
+
+                                <div class="experience-date">
+                                    Aug 2025
+                                </div>
+
+                                <div class="experience-dot"></div>
+
+                                <div class="experience-content">
+                                    <h3>Membuat Website CV</h3>
+                                    <p>Project portfolio pertama</p>
+                                </div>
+                            </div>
+
+
+                            <!-- 2025 JS -->
+                            <div class="experience-item reveal delay-3">
+
+                                <div class="experience-date">
+                                    Mar 2025
+                                </div>
+
+                                <div class="experience-dot"></div>
+
+                                <div class="experience-content">
+                                    <h3>Belajar JavaScript</h3>
+                                    <p>Logika pemrograman web</p>
+                                </div>
+                            </div>
+
+
+                            <!-- 2025 HTML -->
+                            <div class="experience-item reveal delay-4">
+
+                                <div class="experience-date">
+                                    Jan 2025
+                                </div>
+
+                                <div class="experience-dot"></div>
+
+                                <div class="experience-content">
+                                    <h3>Belajar HTML & CSS</h3>
+                                    <p>Dasar pembuatan website</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                
+                    <div class="portfolio-contact reveal delay-1">
+                        <h2 class="contact-title reveal delay-2">CONTACT ME</h2>
+                        <p class="contact-subtitle reveal delay-3">
+                            Jika ingin bekerja sama atau berdiskusi
+                        </p>
+
+                        <div class="contact-container reveal delay-3">
+
+                            <!-- FORM -->
+                            <form class="contact-form">
+
+                                <label>Nama</label>
+                                <input type="text" placeholder="Masukkan nama anda">
+
+                                <label>Email</label>
+                                <input type="email" placeholder="Masukkan email anda">
+
+                                <label>Pesan</label>
+                                <textarea rows="5" placeholder="Tulis pesan anda..."></textarea>
+
+                                <button type="submit" class="contact-button">
+                                    Kirim Pesan
+                                </button>
+                            </form>
+                        </div>
+
+
+                        <!-- SOCIAL CONTACT -->
+
+                        <div class="contact-social reveal delay-4">
+
+                            <p>Atau hubungi saya melalui:</p>
+
+                            <div class="contact-links">
+
+                                <a href="#" class="contact-link reveal delay-1">
+                                    <i class="bi bi-github"></i>
+                                    GitHub
+                                </a>
+
+                                <a href="#" class="contact-link reveal delay-2">
+                                    <i class="bi bi-instagram"></i>
+                                    Instagram
+                                </a>
+
+                                <a href="#" class="contact-link reveal delay-3">
+                                    <i class="bi bi-linkedin"></i>
+                                    LinkedIn
+                                </a>
+
+                                <a href="#" class="contact-link reveal delay-4">
+                                    <i class="bi bi-envelope"></i>
+                                    Email
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="portfolio-footer reveal delay-5">
+                <div class="footer-container">
+
+                    <!-- TITLE -->
+                    <h2 class="footer-title  reveal delay-1">Aris Portfolio</h2>
+                    <p class="footer-tagline  reveal delay-2">
+                        Web Development Learner
+                    </p>
+
+                    <!-- NAVIGATION -->
+                    <div class="footer-nav  reveal delay-3">
+
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Skills</a>
+                        <a href="#">Portfolio</a>
+                        <a href="#">Experience</a>
+                        <a href="#">Contact</a>
+
+                    </div>
+
+                    <!-- SOCIAL -->
+                    <div class="footer-social  reveal delay-4">
+
+                        <a href="#">
+                            <i class="bi bi-github"></i>
+                            GitHub
+                        </a>
+
+                        <a href="#">
+                            <i class="bi bi-instagram"></i>
+                            Instagram
+                        </a>
+
+                        <a href="#">
+                            <i class="bi bi-linkedin"></i>
+                            LinkedIn
+                        </a>
+
+                    </div>
+
+                    <!-- COPYRIGHT -->
+                    <div class="footer-bottom  reveal delay-5">
+                        © 2026 Aris. All Rights Reserved
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Portofolio end -->
+
+        <!-- Menu game -->
+
+        <section id="game">
+
+            <div class="game-container">
+                <h1>Quick Math</h1>
+
+                <!-- START SCREEN -->
+
+                <div id="game-start">
+                    <p>Test your speed solving math problems</p>
+                    <button id="startGame">Start Game</button>
+                </div>
+
+
+                <!-- GAME SCREEN -->
+
+                <div id="game-play" style="display:none;">
+                    <div class="game-info">
+                    <span id="questionNumber"></span>
+                    <span id="timer"></span>
+                </div>
+
+                    <h2 id="questionText"></h2>
+                    <input type="number" id="answerInput" placeholder="Your answer">
+                    <button id="submitAnswer">Submit</button>
+
+                </div>
+
+
+                <!-- RESULT SCREEN -->
+
+                <div id="game-result" style="display:none;">
+                    <h2>Game Result</h2>
+                    <p id="scoreText"></p>
+                <table>
+
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Question</th>
+                        <th>Your Answer</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+
+                <tbody id="resultTable"></tbody>
+                    </table>
+                    <button id="restartGame">Play Again</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu game end -->
+
+        <!-- Menu contact -->
+
+        <section id="contact">
+            <div class="page-contact">
+                <!-- Heading -->
+                <div class="contact-header reveal">
+                    <h2>Get In Touch</h2>
+                    <p>Ada hal yang mau di tanyakan ? </p>
+                </div>
+
+                <!-- Contact Container -->
+                <div class="contact-container">
+                    <!-- Contact Info -->
+                    <div class="contact-info reveal">
+                        <h3>Contact Information</h3>
+
+                        <div class="info-item">
+                            <span>📧</span>
+                            <p>aris123muslim@email.com</p>
+                        </div>
+
+                        <div class="info-item">
+                            <span>📞</span>
+                            <p>+62-852-7175-0361</p>
+                        </div>
+
+                        <div class="info-item">
+                            <span>📍</span>
+                            <p>Indonesia</p>
+                        </div>
+
+                        <!-- Social Media -->
+                        <div class="social-media">
+                            <h4>Follow Me</h4>
+                            <div class="social-icons">
+                                <a href="#">Instagram</a>
+                                <a href="#">LinkedIn</a>
+                                <a href="#">Github</a>
+                                <a href="#">Twitter</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form reveal">
+                        <h3>Send Message</h3>
+
+                        <form>
+                            <input type="text" placeholder="Name" required>
+                            <input type="email" placeholder="Email" required>
+                            <input type="text" placeholder="Subject">
+
+                            <textarea placeholder="Message" rows="5"></textarea>
+
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Google Map -->
+                <div class="contact-map reveal">
+                    <iframe
+                        src="https://maps.google.com/maps?q=Jalan%20Taman%20Sari%20Bukit%20Raya%20Pekanbaru%20Riau%20Indonesia&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+        <!-- Menu contact -->
+    </main>
+    <!-- main end -->
+    <script src="java.js"></script>
+</body>
+</html>
